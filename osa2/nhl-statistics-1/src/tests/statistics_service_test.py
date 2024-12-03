@@ -29,8 +29,8 @@ class TestStatisticsService(unittest.TestCase):
 
     def test_topPelaajat(self):
         top_players = self.stats.top(2)
-        expected_top_names = ["Gretzky", "Lemieux", "Yzerman"]
         top_names = [player.name for player in top_players]
+        expected_top_names = ["Gretzky", "Lemieux", "Yzerman"]
         self.assertEqual(top_names, expected_top_names)
 
 if __name__ == "__main__":
